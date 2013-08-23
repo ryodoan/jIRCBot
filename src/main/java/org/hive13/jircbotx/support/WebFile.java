@@ -5,9 +5,7 @@ import java.net.MalformedURLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.google.gdata.util.common.util.Base64;
-
-
+import org.pircbotx.Base64;
 
 /**
  * Get a web file.
@@ -61,7 +59,7 @@ public final class WebFile {
 
       if(!username.isEmpty())
       {
-         String encoded = Base64.encode((username + ":" + password).getBytes());
+         String encoded = Base64.encodeToString((username + ":" + password).getBytes(), true);
          conn.setRequestProperty("Authorization", "Basic "+encoded);
       }
       // Send the request.
