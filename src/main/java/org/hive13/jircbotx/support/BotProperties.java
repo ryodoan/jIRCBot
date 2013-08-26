@@ -32,6 +32,11 @@ public class BotProperties {
    private final String defaultTwitterAccessToken = "";
    private final String defaultTwitterAccessSecret = "";
    
+   private final String defaultGoogleSimpleAPI = "";
+   private final String defaultGoogleClientID = "";
+   private final String defaultgoogleClientSecret = "";
+   
+   
    private final String defaultJDBCUrl    = "";
    private final String defaultJDBCUser   = "";
    private final String defaultJDBCPass   = "";
@@ -174,6 +179,21 @@ public class BotProperties {
    /** API key to use for the Weather Underground API */
    public String getTwitterAccessSecret() {
       return getProp("twitterAccessSecret", defaultTwitterAccessSecret);
+   }
+
+   /** API key to use for the Weather Underground API */
+   public String getGoogleSimpleAPI() {
+      return getProp("googleSimpleAPI", defaultGoogleSimpleAPI);
+   }
+
+   /** API key to use for the Weather Underground API */
+   public String getGoogleClientID() {
+      return getProp("googleClientID", defaultGoogleClientID);
+   }
+
+   /** API key to use for the Weather Underground API */
+   public String getGoogleClientSecret() {
+      return getProp("googleClientSecret", defaultgoogleClientSecret);
    }
    
    /** JDBC URL to use to connect to the database */
